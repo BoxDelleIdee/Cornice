@@ -18,13 +18,13 @@ today = str(date.today())
 today = date_time.strftime("%d %B, %Y") 
 
 #Definizione dei font da utilizzare
-font12 = ImageFont.truetype('font/Font.ttc', 12)
-font24 = ImageFont.truetype('font/Font.ttc', 24)
-font32 = ImageFont.truetype('font/Font.ttc', 32)
-font_12 = ImageFont.truetype('font/Phosphate.ttc', 12)
-font_24 = ImageFont.truetype('font/Phosphate.ttc', 24)
-font_32 = ImageFont.truetype('font/Phosphate.ttc', 32)
-font_36 = ImageFont.truetype('font/Phosphate.ttc', 36)
+font12 = ImageFont.truetype('/home/pi/Cornice/font/Font.ttc', 12)
+font24 = ImageFont.truetype('/home/pi/Cornice/font/Font.ttc', 24)
+font32 = ImageFont.truetype('/home/pi/Cornice/font/Font.ttc', 32)
+font_12 = ImageFont.truetype('/home/pi/Cornice/font/Phosphate.ttc', 12)
+font_24 = ImageFont.truetype('/home/pi/Cornice/font/Phosphate.ttc', 24)
+font_32 = ImageFont.truetype('/home/pi/Cornice/font/Phosphate.ttc', 32)
+font_36 = ImageFont.truetype('/home/pi/Cornice/font/Phosphate.ttc', 36)
 
 try:
 
@@ -81,7 +81,7 @@ try:
     instagram_exe=os.system("python3 instagram.py")
 
     # Apertura del file dove instagram.py ha salvato il numero degli iscritti al canale
-    f=open("instagram.txt", "r")
+    f=open("/home/pi/Cornice/instagram.txt", "r")
     instagram=f.read()
     f.close()
     
@@ -108,17 +108,17 @@ try:
     draw_blackImage = ImageDraw.Draw(blackImage)
     draw_redImage = ImageDraw.Draw(redImage)
     # Caricamento delle immagini da utilizzare su vari oggetti
-    griglia= Image.open('bmp/880_528.bmp')
-    logo_youtube= Image.open('bmp/youtubeIcon.bmp')
-    scritta_youtube= Image.open('bmp/Q2-2.bmp')
-    logo_instagram= Image.open('bmp/Q3.bmp')
-    scritte_youtube= Image.open('bmp/Q2-3.bmp')
-    scritte_instagram= Image.open('bmp/Q3-2.bmp')
-    logo_facebook= Image.open('bmp/Q3-3.bmp')
-    logo_datario= Image.open('bmp/Q4-1.bmp')
-    logo_tempo= Image.open('bmp/Q4-2.bmp')
-    logo_web= Image.open('bmp/Q4-3.bmp')
-    logo = Image.open('bmp/Q1.bmp')
+    griglia= Image.open('/home/pi/Cornice/bmp/880_528.bmp')
+    logo_youtube= Image.open('/home/pi/Cornice/bmp/youtubeIcon.bmp')
+    scritta_youtube= Image.open('/home/pi/Cornice/bmp/Q2-2.bmp')
+    logo_instagram= Image.open('/home/pi/Cornice/bmp/Q3.bmp')
+    scritte_youtube= Image.open('/home/pi/Cornice/bmp/Q2-3.bmp')
+    scritte_instagram= Image.open('/home/pi/Cornice/bmp/Q3-2.bmp')
+    logo_facebook= Image.open('/home/pi/Cornice/bmp/Q3-3.bmp')
+    logo_datario= Image.open('/home/pi/Cornice/bmp/Q4-1.bmp')
+    logo_tempo= Image.open('/home/pi/Cornice/bmp/Q4-2.bmp')
+    logo_web= Image.open('/home/pi/Cornice/bmp/Q4-3.bmp')
+    logo = Image.open('/home/pi/Cornice/bmp/Q1.bmp')
     # Inserimento delle scritte sul layer nero e rosso
     draw_blackImage.text((550, 295), today, font = font32, fill = 0)
     draw_blackImage.text((550, 355), CITY+" temp. "+temperatura, font = font32, fill = 0)
