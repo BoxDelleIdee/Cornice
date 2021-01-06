@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import instaloader
 L = instaloader.Instaloader()
 # Utente instagram
